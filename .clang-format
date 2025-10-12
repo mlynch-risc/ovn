@@ -1,0 +1,81 @@
+# clang-format configuration for OVN (Open Virtual Network) project
+# # Based on OVN coding style guidelines
+#
+# Use the LLVM style as a base and customize
+BasedOnStyle: LLVM
+
+# Language specification
+Language: Cpp
+
+# Indentation
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ContinuationIndentWidth: 4
+
+# Brace placement - BSD style (Allman)
+BreakBeforeBraces: Linux
+
+# Spaces
+SpaceBeforeParens: ControlStatements
+SpaceAfterCStyleCast: false
+SpaceBeforeAssignmentOperators: true
+SpaceInEmptyParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+SpacesInCStyleCastParentheses: false
+SpaceBeforeCpp11BracedList: true
+
+# Line length
+ColumnLimit: 79
+
+# Alignment
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignEscapedNewlines: Left
+AlignOperands: true
+AlignTrailingComments: true
+AlignConsecutiveMacros: Consecutive
+
+# Pointer and reference alignment
+PointerAlignment: Right
+DerivePointerAlignment: false
+
+# Function declarations and calls
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortFunctionsOnASingleLine: None
+AllowShortBlocksOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakAfterReturnType: AllDefinitions
+BinPackParameters: true
+
+# Breaking
+BreakBeforeBinaryOperators: None
+BreakBeforeTernaryOperators: true
+BreakStringLiterals: true
+
+# Includes
+SortIncludes: true
+IncludeBlocks: Preserve
+
+# Other formatting options
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
+IndentCaseLabels: false
+IndentWrappedFunctionNames: false
+
+# Comments
+ReflowComments: false
+
+# Penalties (for line breaking decisions)
+PenaltyBreakBeforeFirstCallParameter: 19
+PenaltyBreakComment: 300
+PenaltyBreakString: 1000
+PenaltyExcessCharacter: 1000000
+PenaltyReturnTypeOnItsOwnLine: 60
+
+# ForEachMacro
+ForEachMacros: [HMAP_FOR_EACH, HMAPX_FOR_EACH, VECTOR_FOR_EACH_PTR, SBREC_STATIC_MAC_BINDING_TABLE_FOR_EACH, HMAP_FOR_EACH_POP,
+  HMAP_FOR_EACH_WITH_HASH, UUIDSET_FOR_EACH, SMAP_FOR_EACH_SAFE]
